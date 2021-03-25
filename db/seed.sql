@@ -1,7 +1,7 @@
 create table node4_review_users (
     id serial primary key,
-    username varchar(40),
-    password varchar(30)
+    username varchar(255),
+    password varchar(255)
 )
 
 select * from node4_review_users

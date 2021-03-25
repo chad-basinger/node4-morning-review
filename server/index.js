@@ -1,3 +1,4 @@
+const dotenv = require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 const massive = require('massive')
@@ -21,6 +22,7 @@ app.use(session({
 }))
 
 app.post('/auth/register', middleware.checkUsername, authCtrl.register)
+app.post('/auth/login', middleware.checkUsername, authCtrl.login)
 
 massive({
     connectionString: CONNECTION_STRING,
